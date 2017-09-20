@@ -1,0 +1,61 @@
+
+article.tweet {
+  border-width: thin;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #aaa;
+  margin-top: 15px;
+}
+
+article.tweet:hover {
+
+}
+
+.tweet header {
+  padding: 4px;
+  background-color: #d4efdf
+}
+
+.tweet footer {
+  padding: 4px;
+  height: 30px;
+  border-top-width: thin;
+  border-top-style: solid;
+  border-top-color: #d5d8dc;
+}
+
+.tweet .user {
+  font-size: x-large;
+  font-weight: 700;
+  position: absolute;
+  padding: 4px;
+}
+
+.tweet .handle {
+  float: right;
+  padding-top: 8px;
+}
+
+.tweet .age {
+  font-size: small;
+}
+
+.tweet p {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tweet .tools {
+  float: right;
+  visibility: hidden;
+}
+
+.tweet:hover .tools {
+  visibility: visible;
+}
+
+.tools {
+  color: #d4efdf;
+}
