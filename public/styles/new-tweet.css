@@ -12,6 +12,7 @@ main.container {
   background-color: #eee;
   padding-right: 2em;
   padding-left: 2em;
+  display: none;
 }
 
 .new-tweet h2 {

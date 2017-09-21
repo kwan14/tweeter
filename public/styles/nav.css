@@ -7,7 +7,7 @@
   height: 80px;
   width: 100vw;
   padding-left: 2em;
-  padding-right: 2em;
+  padding-right: 4em;
   background-color: #00a087;
   color: #e8fdff;
   z-index: 100;
@@ -25,3 +25,23 @@
   font-size: 200%;
   line-height: 80px;
 }
+
+#nav-bar .compose {
+  height: 60px;
+  width: 120px;
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #ffffff;
+}
+
+#nav-bar .nav-buttons {
+  float: right;
+}
+
+.nav-buttons .compose:hover {
+  cursor: pointer;
+}
+

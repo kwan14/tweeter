@@ -37,7 +37,11 @@ $(function () {
     }
   });
 
-
+  $("#nav-bar .compose").on("click", function (event) {
+    console.log("Composing...");
+    $(".new-tweet").slideToggle("slow");
+    $(".new-tweet textarea").focus();
+  });
 
   function dayDifference(laterDate, earlierDate) {
     return(Math.floor((laterDate - earlierDate)/1000/60/60/24));
@@ -96,7 +100,9 @@ $(function () {
     });
   }
 
+
   loadTweets();
+  $(".new-tweet").slideUp();
 
 
   //renderTweets(data);
