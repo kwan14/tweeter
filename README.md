@@ -13,8 +13,13 @@ The front end demonstrates skills working with HTML, CSS, JavaScript, Jquery and
 
 ## Dependencies
 
-body-parser
-chance
-express
-md5
+body-parser,
+chance,
+express,
+md5,
 mongodb
+
+## Screenshots
+
+!["Tweets"](https://github.com/kwan14/tweeter/blob/master/docs/tweets.png)
+!["New Tweet"](https://github.com/kwan14/tweeter/blob/master/docs/new-tweet.png)
