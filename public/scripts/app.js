@@ -31,6 +31,7 @@ $(function () {
         data: tweetText.serialize(),
         dataType: "text",
         success: function () {
+          tweetText.val("");
           refetchTweet();
         }
       })
@@ -38,9 +39,15 @@ $(function () {
   });
 
   $("#nav-bar .compose").on("click", function (event) {
-    console.log("Composing...");
     $(".new-tweet").slideToggle("slow");
     $(".new-tweet textarea").focus();
+    if( ($(this).css("color") === "rgb(0, 0, 0)") ) {
+      $(this).css("color", "#00a087");
+      $(this).css("background-color", "#e8fdff");
+    } else {
+      $(this).css("color", "black");
+      $(this).css("background-color", "white");
+    }
   });
 
   function dayDifference(laterDate, earlierDate) {
@@ -91,10 +98,10 @@ $(function () {
         let index;
         for (let i = 0 ; i < tweetDb.length ; i++) {
           if( tweetDb[i].created_at > mostRecent ) {
+            mostRecent = tweetDb[i].created_at;
             index = i;
           }
         }
-        console.log(tweetDb[index]);
         $("#all-tweets").prepend(createTweetElement(tweetDb[index]));
       }
     });
@@ -105,7 +112,6 @@ $(function () {
   $(".new-tweet").slideUp();
 
 
-  //renderTweets(data);
 
 
 
