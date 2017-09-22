@@ -7,10 +7,6 @@ article.tweet {
   margin-top: 15px;
 }
 
-article.tweet:hover {
-
-}
-
 .tweet header {
   padding: 4px;
   background-color: #d4efdf
