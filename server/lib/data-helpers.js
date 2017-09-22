@@ -53,6 +53,7 @@ MongoClient.connect(MONGODB_URI, (err, database) => {
 
       database.collection("tweeter").find().toArray((err, tweets) => {
         if (err) {
+          console.log(err);
           return callback(err);
         }
         const sortNewestFirst = (a, b) => b.created_at - a.created_at;

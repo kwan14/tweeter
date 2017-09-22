@@ -9,7 +9,7 @@ $(function () {
   $(".new-tweet textarea").on("keyup", function (event) {
     let count = charCounter($(this).val());
     if (count <= MAXLENGTH) {
-      $(".new-tweet span").text(String(count));
+      $(".new-tweet span").text(String(MAXLENGTH - count));
       $(this).closest(".new-tweet").find(".counter").css("color", "black");
     } else {
       let overCount = count - MAXLENGTH;
@@ -32,6 +32,7 @@ $(function () {
         dataType: "text",
         success: function () {
           tweetText.val("");
+          $(".new-tweet span").text(String(MAXLENGTH));
           refetchTweet();
         }
       })
